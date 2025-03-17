@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E3F2E1; /* Light Mint */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+body img{
+    width: 300px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+.container { 
+    max-width: 500px;
+    background: #F5EEDC; /* Soft Beige */
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+h1 {
+    color: #2C5F2D; /* Forest Green */
+}
+
+fieldset {
+    border: 1px solid #A3B18A;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    color: #1F4D40;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #A3B18A;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:first-of-type {
+    background-color: #3A7D44;
+    color: white;
+}
+
+button:last-of-type {
+    background-color: #E6B422;
+}

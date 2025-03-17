@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammehula Tours - Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <img src="images/logo.png" alt="">
+
+    <div class="container">
+        <h1>Billing</h1>
+        <form id="bookingForm">
+            <fieldset>
+                <legend>Customer Details</legend>
+                <label for="customer">Customer Name:</label>
+                <input type="text" id="customer" placeholder="Enter customer name" required>
+                
+                <label for="logo">Upload Logo (Optional):</label>
+                <input type="file" id="logo">
+            </fieldset>
+
+            <fieldset>
+                <legend>Booking Details</legend>
+                <label for="items">Select Tour Package:</label>
+                <select id="items" onchange="getTotalPrice()">
+                    <option value="" data-price="0">-- Select a package --</option>
+                    <option value="beach" data-price="150">Beach Adventure ($150)</option>
+                    <option value="hiking" data-price="200">Hiking Experience ($200)</option>
+                    <option value="cultural" data-price="180">Cultural Tour ($180)</option>
+                </select>
+
+                <label for="adults">Adults:</label>
+                <input type="number" id="adults" value="0" min="0" onchange="getTotalPrice()">
+
+                <label for="children">Children:</label>
+                <input type="number" id="children" value="0" min="0" onchange="getTotalPrice()">
+
+                <label for="rooms">Rooms Needed:</label>
+                <input type="number" id="rooms" value="0" min="0" onchange="getTotalPrice()">
+            </fieldset>
+
+            <fieldset>
+                <legend>Price Modifiers</legend>
+                <label for="discount">Discount (%):</label>
+                <input type="number" id="discount" value="0" min="0" max="100" onchange="getTotalPrice()">
+
+                <label for="tax">Tax (%):</label>
+                <input type="number" id="tax" value="0" min="0" max="100" onchange="getTotalPrice()">
+            </fieldset>
+
+            <fieldset>
+                <legend>Total Price</legend>
+                <label>Total Amount ($):</label>
+                <input type="text" id="total" readonly>
+            </fieldset>
+
+            <button type="button" onclick="generateReceipt()">Generate PDF</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
